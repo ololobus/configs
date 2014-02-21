@@ -1,0 +1,8 @@
+[user]
+        name = ololobus
+        email = alex.ololo@yandex.ru
+[alias]
+        put = push origin
+        co = checkout
+        st = status
+        ftch = fetch -p
