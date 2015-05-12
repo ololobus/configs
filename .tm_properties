@@ -1,2 +1,2 @@
 include = "{$include,.*}"
-exclude = "{$exclude,.git}"
+exclude = "{$exclude,.git,.DS_Store}"
