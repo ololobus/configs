@@ -13,5 +13,14 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
+# For Apache Spark
+if which java > /dev/null; then export JAVA_HOME=$(/usr/libexec/java_home); fi
+
+# For a ipython notebook and pyspark integration
+if which pyspark > /dev/null; then
+  export SPARK_HOME="/usr/local/Cellar/apache-spark/1.3.1_1/libexec/"
+  export PYSPARK_SUBMIT_ARGS="--master local[2]"
+fi
+
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
