@@ -1,8 +1,11 @@
-# For python installing from pyenv on Mac OS X 10.10.*
 export CFLAGS="-I$(xcrun --show-sdk-path)/usr/include"
 
+# For building gem native extensions wit openssl on Mac OS X 10.11.*
+export LDFLAGS="-L/usr/local/opt/openssl/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl/include"
+
 # Postgres.app path
-export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin/"
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 
 alias ls='ls -A'
 
@@ -24,3 +27,12 @@ fi
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+export PATH="/usr/local/sbin:$PATH"
+
+if which istats > /dev/null; then
+  istats cpu
+fi
+
+# Up/Down keys history listing
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
