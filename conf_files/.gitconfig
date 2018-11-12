@@ -1,5 +1,5 @@
 [user]
-        name = Alex K
+        name = Alexey Kondratov
         email = alex.lumir@gmail.com
 [alias]
         put = push origin
@@ -8,6 +8,7 @@
         ftch = fetch -p
 	pl = pull --rebase
 	br = branch
+	viz = log --graph --decorate --oneline
 [push]
         default = simple
 [filter "lfs"]

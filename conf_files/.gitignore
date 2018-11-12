@@ -1,2 +1,5 @@
 .DS_Store
+.vscode
+postgres_data
+postgres_bin
 
