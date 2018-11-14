@@ -8,7 +8,7 @@
         ftch = fetch -p
 	pl = pull --rebase
 	br = branch
-	viz = log --graph --decorate --oneline
+	viz = log --graph --decorate --oneline --all
 [push]
         default = simple
 [filter "lfs"]
