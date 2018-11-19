@@ -9,12 +9,13 @@
 	pl = pull --rebase
 	br = branch
 	viz = log --graph --decorate --oneline --all
+        l = log --pretty='%C(yellow)%h%Creset %ai by %Cgreen%an (%ae)%Creset%Cred%d%Creset: %s' -n 15
+        lg = log --pretty='%C(yellow)%h%Creset %ai by %Cgreen%an (%ae)%Creset%Cred%d%Creset: %s'
 [push]
         default = simple
 [filter "lfs"]
         clean = git-lfs clean -- %f
         smudge = git-lfs smudge -- %f
 	required = true
-
 [core]
 	excludesfile = ~/.gitignore
