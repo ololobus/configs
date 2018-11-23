@@ -47,7 +47,7 @@ fi
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/bin:/usr/local/sbin:$PATH"
 
 if which istats > /dev/null; then
   istats cpu
@@ -56,3 +56,8 @@ fi
 # Up/Down keys history listing
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
+
+if which nvm > /dev/null; then
+  export NVM_DIR="$HOME/.nvm"
+  . "/usr/local/opt/nvm/nvm.sh"
+ fi
