@@ -1,6 +1,6 @@
 export HISTSIZE=5000
-export HISTFILESIZE=10000
-export HISTCONTROL=ignoredups:erasedups
+export HISTFILESIZE=100000
+export HISTCONTROL=erasedups
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
@@ -26,7 +26,7 @@ alias top-top='top -o CPU -O MEM'
 #PS1='\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 PS1='|\t \[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\n|--> '
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
+if [ -f $(which brew) ] && [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
