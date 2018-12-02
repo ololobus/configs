@@ -1,9 +1,12 @@
-export HISTSIZE=5000
-export HISTFILESIZE=100000
-export HISTCONTROL=erasedups
+# The personal initialization file, executed for login shells
+#
+# The main difference with shell config files is that some are only read by "login" shells (eg. when you login from another host, or login at the text console of a local unix machine). these are the ones called, say, .login or .profile or .zlogin (depending on which shell you're using).
+#
 
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+[[ -r ~/.bashrc ]] && . ~/.bashrc
+
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 
 # For building gem native extensions wit openssl on Mac OS X 10.11.*
 # export LDFLAGS="-L/usr/local/opt/openssl/lib"
@@ -23,8 +26,8 @@ export PATH="$PATH:~/pg-scripts"
 alias ls='ls -A'
 alias top-top='top -o CPU -O MEM'
 
-#PS1='\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-PS1='|\t \[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\n|--> '
+# Prompt line
+PS1='│\t \[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\n╘=> '
 
 if which brew > /dev/null; then
   if [ -f $(brew --prefix)/etc/bash_completion ]; then
@@ -49,17 +52,14 @@ fi
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-export PATH="$HOME/bin:/usr/local/sbin:$PATH"
 
 if which istats > /dev/null; then
   istats cpu
 fi
 
-# Up/Down keys history listing
-bind '"\e[A": history-search-backward'
-bind '"\e[B": history-search-forward'
-
 if which nvm > /dev/null; then
   export NVM_DIR="$HOME/.nvm"
   . "/usr/local/opt/nvm/nvm.sh"
- fi
+fi
+
+export PATH="$HOME/bin:/usr/local/sbin:$PATH"
