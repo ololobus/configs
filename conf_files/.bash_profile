@@ -27,7 +27,7 @@ alias ls='ls -A'
 alias top-top='top -o CPU -O MEM'
 
 # Prompt line
-PS1='│\t \[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\n╘=> '
+PS1='│\t \[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\n╘═> '
 
 if which brew > /dev/null; then
   if [ -f $(brew --prefix)/etc/bash_completion ]; then
