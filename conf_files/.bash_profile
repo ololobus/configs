@@ -5,6 +5,16 @@
 
 [[ -r ~/.bashrc ]] && . ~/.bashrc
 
+# Prompt line
+PS1='│\t \[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\n╘═> '
+
+export CLICOLOR=1
+export LSCOLORS=gxFxBxDxCxegedabagaced # BSD ls colors
+# export LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90' # Linux ls colors?
+
+alias ls='ls -A'
+alias top-top='top -o CPU -O MEM'
+
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
@@ -22,12 +32,6 @@ export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 
 # Postgres dev scripts
 export PATH="$PATH:~/pg-scripts"
-
-alias ls='ls -A'
-alias top-top='top -o CPU -O MEM'
-
-# Prompt line
-PS1='│\t \[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\n╘═> '
 
 if which brew > /dev/null; then
   if [ -f $(brew --prefix)/etc/bash_completion ]; then
