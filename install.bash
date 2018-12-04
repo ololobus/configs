@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-ls -A ./conf_files | xargs -I {} -t ln -s $(pwd)/conf_files/{} $HOME/{}
+ls -A ./dotfiles/common | xargs -I {} -t ln -s $(pwd)/dotfiles/common/{} $HOME/{}

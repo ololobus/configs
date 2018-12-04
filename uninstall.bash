@@ -12,6 +12,6 @@
 #   rm -i $HOME/$f
 # done
 
-for f in $(ls -A ./conf_files/); do
+for f in $(ls -A ./dotfiles/common/); do
   rm -i $HOME/$f
 done
