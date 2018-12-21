@@ -10,7 +10,8 @@
 	br = branch
 	viz = log --graph --decorate --oneline --all
         l = log --pretty='%C(yellow)%h%Creset %ai by %Cgreen%an (%ae)%Creset%Cred%d%Creset: %s' -n 15
-        lg = log --pretty='%C(yellow)%h%Creset %ai by %Cgreen%an (%ae)%Creset%Cred%d%Creset: %s'
+	lg = log --pretty='%C(yellow)%h%Creset %ai by %Cgreen%an (%ae)%Creset%Cred%d%Creset: %s'
+	parent = !git log --oneline --merges "$@" | grep into | sed 's/.* into //g' | head -n 10
 [push]
         default = simple
 [filter "lfs"]
@@ -20,3 +21,4 @@
 	process = git-lfs filter-process
 [core]
 	excludesfile = ~/.gitignore
+	editor = vim

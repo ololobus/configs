@@ -18,6 +18,10 @@ alias top-top='top -o CPU -O MEM'
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
+if which vim > /dev/null; then export EDITOR=vim; fi
+if which code > /dev/null; then export VISUAL=code; fi
+if which mate > /dev/null; then export VISUAL=mate; fi
+
 # For building gem native extensions wit openssl on Mac OS X 10.11.*
 # export LDFLAGS="-L/usr/local/opt/openssl/lib"
 # export CPPFLAGS="-I/usr/local/opt/openssl/include"
