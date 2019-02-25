@@ -3,7 +3,8 @@
         email = kondratov.aleksey@gmail.com
 [alias]
         put = push origin
-        co = checkout
+	co = checkout
+	cp = cherry-pick
         st = status
         ftch = fetch -p
 	pl = pull --rebase
@@ -14,7 +15,7 @@
 	lr = log --oneline --reverse
 	parent = !git log --oneline --merges "$@" | grep into | sed 's/.* into //g' | head -n 10
 [push]
-        default = simple
+	default = current
 [filter "lfs"]
         clean = git-lfs clean -- %f
         smudge = git-lfs smudge -- %f
