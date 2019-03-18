@@ -13,6 +13,7 @@ export LSCOLORS=gxFxBxDxCxegedabagaced # BSD ls colors
 # export LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90' # Linux ls colors?
 
 alias ls='ls -A'
+alias py='python'
 alias top-top='top -o CPU -O MEM'
 
 export LANG="en_US.UTF-8"
