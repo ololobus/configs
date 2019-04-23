@@ -14,6 +14,7 @@
 	lg = log --pretty='%C(yellow)%h%Creset %ai by %Cgreen%an (%ae)%Creset%Cred%d%Creset: %s'
 	lr = log --oneline --reverse
 	parent = !git log --oneline --merges "$@" | grep into | sed 's/.* into //g' | head -n 10
+	aliases = config --get-regexp '^alias\\.'
 [push]
 	default = current
 [filter "lfs"]
