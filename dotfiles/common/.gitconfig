@@ -14,7 +14,8 @@
 	lg = log --pretty='%C(yellow)%h%Creset %ai by %Cgreen%an (%ae)%Creset%Cred%d%Creset: %s'
 	lr = log --oneline --reverse
 	parent = !git log --oneline --merges "$@" | grep into | sed 's/.* into //g' | head -n 10
-	check = !sh -c 'git branch --contains $1 2>&1 | grep -q $(git rev-parse --abbrev-ref @) && echo INCLUDED' -
+	#check = !sh -c 'git branch --contains $1 2>&1 | grep -q $(git rev-parse --abbrev-ref @) && echo INCLUDED' -
+	check = !sh -c 'git merge-base --is-ancestor $1 @ && echo INCLUDED || echo "NOT INCLUDED"' -
 	checkall = !sh -c 'git branch -a --contains $1' -
 	aliases = config --get-regexp '^alias\\.'
 [push]
