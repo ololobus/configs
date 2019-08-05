@@ -8,10 +8,12 @@
 #
 
 # For setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-export HISTSIZE=5000
-export HISTFILESIZE=100000
+export HISTSIZE=500000
+export HISTFILESIZE=5000000
 export HISTCONTROL=erasedups
-export PROMPT_COMMAND='history -a'
+# export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
 
 # Up/Down keys history listing
 bind '"\e[A": history-search-backward'

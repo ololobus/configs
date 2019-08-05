@@ -71,4 +71,11 @@ if which nvm > /dev/null; then
   . "/usr/local/opt/nvm/nvm.sh"
 fi
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+
 export PATH="$HOME/bin:/usr/local/sbin:$PATH"
+
+[[ -r ~/workspace/connect-iq-sdk ]] && export PATH=$PATH:$HOME/workspace/connect-iq-sdk/connectiq-sdk-mac-3.0.12-2019-06-12-77ed6f47e/bin
+
