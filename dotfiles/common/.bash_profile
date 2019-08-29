@@ -45,7 +45,7 @@ if which brew > /dev/null; then
 fi
 
 # For Apache Spark
-if which java > /dev/null; then export JAVA_HOME=$(/usr/libexec/java_home); fi
+if which java > /dev/null && [[ -r /usr/libexec/java_home ]]; then export JAVA_HOME=$(/usr/libexec/java_home); fi
 
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
