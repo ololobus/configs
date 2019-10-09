@@ -1,16 +1,16 @@
 [user]
-        name = Alexey Kondratov
-        email = kondratov.aleksey@gmail.com
+    name = Alexey Kondratov
+    email = kondratov.aleksey@gmail.com
 [alias]
-        put = push origin
+    put = push origin
 	co = checkout
 	cp = cherry-pick
-        st = status
-        fp = fetch -p
-	pl = pull --rebase
+    st = status
 	br = branch
+	pl = pull --rebase
+	fp = fetch -p
 	viz = log --graph --decorate --oneline --all
-        l = log --pretty='%C(yellow)%h%Creset %ai by %Cgreen%an (%ae)%Creset%Cred%d%Creset: %s' -n 15
+    l = log --pretty='%C(yellow)%h%Creset %ai by %Cgreen%an (%ae)%Creset%Cred%d%Creset: %s' -n 15
 	lg = log --pretty='%C(yellow)%h%Creset %ai by %Cgreen%an (%ae)%Creset%Cred%d%Creset: %s'
 	lr = log --oneline --reverse
 	parent = !git log --oneline --merges "$@" | grep into | sed 's/.* into //g' | head -n 10
@@ -21,10 +21,11 @@
 [push]
 	default = current
 [filter "lfs"]
-        clean = git-lfs clean -- %f
-        smudge = git-lfs smudge -- %f
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
 	required = true
 	process = git-lfs filter-process
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim
+
