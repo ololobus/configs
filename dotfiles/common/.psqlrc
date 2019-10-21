@@ -1,14 +1,17 @@
---\set QUIET 1
+\setenv PSQL_EDITOR 'vim'
+--\setenv PSQL_EDITOR 'joe --exask'
 
-\setenv PSQL_EDITOR 'joe --exask'
 \pset null '(null)'
-\set HISTCONTROL ignoreboth
---\set HISTSIZE
-\timing
 \set PROMPT1 'pid:%[%033[1;44;1m%]%p%[%033[0m%] %M:%> %n@%/%R%x%# '
 --\set PROMPT1 '%[%033[1m%]%n@%/%R%[%033[0m%]%# '
 \set PROMPT2 ' '
-\set COMP_KEYWORD_CASE upper
 
+\set HISTCONTROL ignoreboth
+\set HISTSIZE 100000
+\set COMP_KEYWORD_CASE preserve-upper
+
+\timing
+
+--\set QUIET 1
 --\setenv LESS '-iMSRx4 -FX'
 --\set HISTFILE ~/.psql_history- :DBNAME
