@@ -3,29 +3,30 @@
     email = kondratov.aleksey@gmail.com
 [alias]
     put = push origin
-	co = checkout
-	cp = cherry-pick
+    co = checkout
+    cp = cherry-pick
     st = status
-	br = branch
-	pl = pull --rebase
-	fp = fetch -p
-	viz = log --graph --decorate --oneline --all
+    br = branch
+    pl = pull --rebase
+    fp = fetch -p
+    viz = log --graph --decorate --oneline --all
     l = log --pretty='%C(yellow)%h%Creset %ai by %Cgreen%an (%ae)%Creset%Cred%d%Creset: %s' -n 15
-	lg = log --pretty='%C(yellow)%h%Creset %ai by %Cgreen%an (%ae)%Creset%Cred%d%Creset: %s'
-	lr = log --oneline --reverse
-	parent = !git log --oneline --merges "$@" | grep into | sed 's/.* into //g' | head -n 10
-	#check = !sh -c 'git branch --contains $1 2>&1 | grep -q $(git rev-parse --abbrev-ref @) && echo INCLUDED' -
-	check = !sh -c 'git merge-base --is-ancestor $1 @ && echo INCLUDED || echo "NOT INCLUDED"' -
-	checkall = !sh -c 'git branch -a --contains $1' -
-	aliases = config --get-regexp '^alias\\.'
+    lg = log --pretty='%C(yellow)%h%Creset %ai by %Cgreen%an (%ae)%Creset%Cred%d%Creset: %s'
+    lr = log --oneline --reverse
+    commit-fixup = !git commit --fixup=@ && git rebase -i --autosquash @~2
+    parent = !git log --oneline --merges "$@" | grep into | sed 's/.* into //g' | head -n 10
+    #check = !sh -c 'git branch --contains $1 2>&1 | grep -q $(git rev-parse --abbrev-ref @) && echo INCLUDED' -
+    check = !sh -c 'git merge-base --is-ancestor $1 @ && echo INCLUDED || echo "NOT INCLUDED"' -
+    checkall = !sh -c 'git branch -a --contains $1' -
+    aliases = config --get-regexp '^alias\\.'
 [push]
-	default = current
+    default = current
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
-	required = true
-	process = git-lfs filter-process
+    required = true
+    process = git-lfs filter-process
 [core]
-	excludesfile = ~/.gitignore
-	editor = vim
+    excludesfile = ~/.gitignore
+    editor = vim
 
