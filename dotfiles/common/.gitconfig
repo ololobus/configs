@@ -7,6 +7,8 @@
     cp = cherry-pick
     st = status
     br = branch
+    # b = !git branch | grep '*' | sed -e 's/^\\*\\s//g'
+    b = rev-parse --abbrev-ref @
     pl = pull --rebase
     fp = fetch -p
     viz = log --graph --decorate --oneline --all
@@ -29,4 +31,3 @@
 [core]
     excludesfile = ~/.gitignore
     editor = vim
-
