@@ -15,3 +15,7 @@
 for f in $(ls -A ./dotfiles/common/); do
   rm -i $HOME/$f
 done
+
+for f in $(ls -A ./dotfiles/macos/); do
+  rm -i $HOME/$f
+done
