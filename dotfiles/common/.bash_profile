@@ -8,6 +8,8 @@
 # Prompt line
 PS1='│\t \[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\n╘═> '
 
+export PATH="$HOME/bin:/usr/local/sbin:$PATH"
+
 export CLICOLOR=1
 export LSCOLORS=gxFxBxDxCxegedabagaced # BSD ls colors
 # export LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90' # Linux ls colors?
@@ -74,8 +76,6 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
-
-export PATH="$HOME/bin:/usr/local/sbin:$PATH"
 
 [[ -r ~/workspace/connect-iq-sdk ]] && export PATH=$PATH:$HOME/workspace/connect-iq-sdk/connectiq-sdk-mac-3.0.12-2019-06-12-77ed6f47e/bin
 
