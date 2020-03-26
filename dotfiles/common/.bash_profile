@@ -19,7 +19,8 @@ alias py='python'
 alias top-top='top -o CPU -O MEM'
 
 export LANG="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+# export LC_ALL="en_US.UTF-8"
 
 if which vim > /dev/null; then export EDITOR=vim; fi
 if which code > /dev/null; then export VISUAL=code; fi
