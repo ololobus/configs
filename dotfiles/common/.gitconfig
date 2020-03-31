@@ -14,6 +14,7 @@
     viz = log --graph --decorate --oneline --all
     l = log --pretty='%C(yellow)%h%Creset %ai by %Cgreen%an (%ae)%Creset%Cred%d%Creset: %s' -n 15
     lg = log --pretty='%C(yellow)%h%Creset %ai by %Cgreen%an (%ae)%Creset%Cred%d%Creset: %s'
+    lp = !git l --first-parent
     lr = log --oneline --reverse
     commit-fixup = !git commit --fixup=@ && git rebase -i --autosquash @~2
     parent = !git log --oneline --merges "$@" | grep into | sed 's/.* into //g' | head -n 10
