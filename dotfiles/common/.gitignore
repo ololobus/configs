@@ -1,5 +1,6 @@
 .DS_Store
 .vscode
+.python-version
 postgres_data
 postgres_bin
 
