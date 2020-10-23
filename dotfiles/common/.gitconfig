@@ -21,6 +21,7 @@
     #check = !sh -c 'git branch --contains $1 2>&1 | grep -q $(git rev-parse --abbrev-ref @) && echo INCLUDED' -
     check = !sh -c 'git merge-base --is-ancestor $1 @ && echo INCLUDED || echo "NOT INCLUDED"' -
     checkall = !sh -c 'git branch -a --contains $1' -
+    subtrees = !sh -c 'git log | grep git-subtree-dir | cut -d ":" -f2 | sort | uniq' -
     aliases = config --get-regexp '^alias\\.'
 [push]
     default = current
@@ -33,3 +34,4 @@
     excludesfile = ~/.gitignore
     editor = vim
 	pager = less -x1,5
+	autocrlf = false
