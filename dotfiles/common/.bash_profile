@@ -8,6 +8,9 @@
 # Prompt line
 PS1='│\t \[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\n╘═> '
 
+# Postgres.app path
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
+
 export PATH="$HOME/bin:/usr/local/sbin:$PATH"
 
 export CLICOLOR=1
@@ -34,9 +37,6 @@ if which mate > /dev/null; then export VISUAL=mate; fi
 
 # Yarn global bin
 if which yarn > /dev/null; then export PATH="$PATH:`yarn global bin`"; fi
-
-# Postgres.app path
-export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 
 # Postgres dev scripts
 export PATH="$PATH:~/pg-scripts"
@@ -80,3 +80,4 @@ export NVM_DIR="$HOME/.nvm"
 
 [[ -r ~/workspace/connect-iq-sdk ]] && export PATH=$PATH:$HOME/workspace/connect-iq-sdk/connectiq-sdk-mac-3.0.12-2019-06-12-77ed6f47e/bin
 
+export PATH="/usr/local/opt/llvm/bin:$PATH"
