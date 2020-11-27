@@ -19,3 +19,5 @@ export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
