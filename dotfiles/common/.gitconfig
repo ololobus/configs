@@ -12,7 +12,7 @@
     pl = pull --rebase
     fp = fetch -p
     viz = log --graph --decorate --oneline --all
-    l = log --pretty='%C(yellow)%h%Creset %ai by %Cgreen%an (%ae)%Creset%Cred%d%Creset: %s' -n 15
+    l = !git --no-pager log --pretty='%C(yellow)%h%Creset %ai by %Cgreen%an (%ae)%Creset%Cred%d%Creset: %s' -n 15
     lg = log --pretty='%C(yellow)%h%Creset %ai by %Cgreen%an (%ae)%Creset%Cred%d%Creset: %s'
     lp = !git l --first-parent
     lr = log --oneline --reverse
