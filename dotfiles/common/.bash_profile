@@ -1,6 +1,8 @@
 # The personal initialization file, executed for login shells
 #
-# The main difference with shell config files is that some are only read by "login" shells (eg. when you login from another host, or login at the text console of a local unix machine). these are the ones called, say, .login or .profile or .zlogin (depending on which shell you're using).
+# The main difference with shell config files is that some are only read by "login" shells
+# (eg. when you login from another host, or login at the text console of a local unix machine).
+# these are the ones called, say, .login or .profile or .zlogin (depending on which shell you're using).
 #
 
 [[ -r ~/.bashrc ]] && . ~/.bashrc
