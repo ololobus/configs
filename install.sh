@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 ls -A ./dotfiles/common | xargs -I {} -t ln -s $(pwd)/dotfiles/common/{} $HOME/{}
 

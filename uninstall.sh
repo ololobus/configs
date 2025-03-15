@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 # ls -A ./conf_files/ | xargs -I {} -t rm $HOME/{}
 
