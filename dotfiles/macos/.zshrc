@@ -28,6 +28,23 @@ alias ls="ls -lah"
 # Shell settings
 #
 
+# Enabling and setting git info var to be used in prompt config.
+autoload -Uz vcs_info
+autoload -U colors && colors
+zstyle ':vcs_info:*' enable git svn
+# This line obtains information from the vcs.
+zstyle ':vcs_info:git*' formats "- (%b) "
+precmd() {
+    vcs_info
+}
+
+# Enable substitution in the prompt.
+setopt prompt_subst
+
+NEWLINE=$'\n'
+# prompt="%n@%m %1~ \${vcs_info_msg_0_}${NEWLINE}%# " # Default prompt with git info.
+prompt="%{$fg_bold[green]%}%n@%m %{$fg[blue]%}%D{[%X]} %{$reset_color%}%{$fg[white]%}[%~]%{$reset_color%} \${vcs_info_msg_0_}%{$fg[blue]%}${NEWLINE}->%{$fg_bold[blue]%} %#%{$reset_color%} "
+
 # Enable completion
 autoload -Uz compinit && compinit
 
@@ -38,5 +55,7 @@ export LSCOLORS=gxFxBxDxCxegedabagaced # BSD ls colors
 #
 # Editor settings
 #
+
 if which vim > /dev/null; then export EDITOR=vim; fi
 if which code > /dev/null; then export VISUAL=code; fi
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
