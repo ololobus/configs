@@ -65,10 +65,12 @@ if which code > /dev/null; then export VISUAL=code; fi
 
 export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 export PATH="$(brew --prefix openssl)/bin:$PATH"
+
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
-eval "$(/opt/homebrew/bin/mise activate zsh)"
+[[ -d $PYENV_ROOT/bin ]] && eval "$(pyenv init - zsh)"
+
+[ -s /opt/homebrew/bin/mise ] && eval "$(/opt/homebrew/bin/mise activate zsh)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
