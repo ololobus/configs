@@ -24,3 +24,4 @@ bind '"\e[B": history-search-forward'
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+. "$HOME/.cargo/env"

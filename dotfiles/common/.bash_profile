@@ -83,3 +83,4 @@ export NVM_DIR="$HOME/.nvm"
 [[ -r ~/workspace/connect-iq-sdk ]] && export PATH=$PATH:$HOME/workspace/connect-iq-sdk/connectiq-sdk-mac-3.0.12-2019-06-12-77ed6f47e/bin
 
 export PATH="/usr/local/opt/llvm/bin:$PATH"
+. "$HOME/.cargo/env"
