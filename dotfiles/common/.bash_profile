@@ -23,8 +23,8 @@ alias ls='ls -A'
 alias py='python'
 alias top-top='top -o CPU -O MEM'
 
-export LANG="en_US.UTF-8"
-export LC_CTYPE="en_US.UTF-8"
+# export LANG="en_US.UTF-8"
+# export LC_CTYPE="en_US.UTF-8"
 # export LC_ALL="en_US.UTF-8"
 
 if which vim > /dev/null; then export EDITOR=vim; fi
@@ -84,3 +84,7 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 . "$HOME/.cargo/env"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/alexk/.lmstudio/bin"
+# End of LM Studio CLI section

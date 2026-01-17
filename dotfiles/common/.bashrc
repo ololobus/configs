@@ -25,3 +25,7 @@ bind '"\e[B": history-search-forward'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 . "$HOME/.cargo/env"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/alexk/.lmstudio/bin"
+# End of LM Studio CLI section

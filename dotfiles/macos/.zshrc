@@ -1,5 +1,12 @@
 PATH=/opt/homebrew/bin:$PATH
 PATH=$HOME/.cargo/bin:$PATH
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+
+#
+# Various dev env tools
+#
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 #
 # History settings
@@ -74,4 +81,8 @@ export PYENV_ROOT="$HOME/.pyenv"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+export PATH="/opt/homebrew/sbin:$PATH"
 
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/alexk/.lmstudio/bin"
+# End of LM Studio CLI section
